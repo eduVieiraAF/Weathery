@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +19,6 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-
             android:id="@+id/addressLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,7 +26,6 @@
             android:gravity="center">
 
             <TextView
-
                 android:id="@+id/TV_address"
                 android:textSize="24sp"
                 android:text="Location"
@@ -35,7 +34,6 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-
                 android:id="@+id/TV_updatedAt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,7 +44,6 @@
         </LinearLayout>
 
         <LinearLayout
-
             android:id="@+id/overviewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +51,6 @@
             android:layout_centerInParent="true">
 
             <TextView
-
                 android:id="@+id/TV_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +59,42 @@
                 android:text="Clear Sky"
                 tools:ignore="HardcodedText" />
 
+            <TextView
+                android:id="@+id/TV_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="90sp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_gravity="center"
+                android:text="32ºC"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TV_minTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min temp"
+                    tools:ignore="HardcodedText" />
+                
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/TV_maxTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max temp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
             </LinearLayout>
     </RelativeLayout>
-
 </RelativeLayout>
