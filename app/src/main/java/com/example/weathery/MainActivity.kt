@@ -15,8 +15,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val city = "São Paulo, SP"
-    val api = "70d0c9a3906de21957a0df3ecd97e29c70d0c9a3906de21957a0df3ecd97e29c"
+    val CITY = "saopaulo,sp"
+    val API = "70d0c9a3906de21957a0df3ecd97e29c"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg p0: String?): String? {
 
             val response: String? = try {
-                URL("https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$api")
+                URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API")
                     .readText(Charsets.UTF_8)
             } catch (e: Exception) {
                 null
@@ -90,13 +90,9 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.TV_minTemp).text = tempMin
                 findViewById<TextView>(R.id.TV_maxTemp).text = tempMax
                 findViewById<TextView>(R.id.TV_sunrise).text = SimpleDateFormat(
-                    "hh:mm a",
-                    Locale.ENGLISH
-                ).format(Date(sunrise * 1000))
+                    "hh:mm a", Locale.ENGLISH).format(Date(sunrise * 1000))
                 findViewById<TextView>(R.id.TV_sunset).text = SimpleDateFormat(
-                    "hh:mm a",
-                    Locale.ENGLISH
-                ).format(Date(sunset * 1000))
+                    "hh:mm a", Locale.ENGLISH).format(Date(sunset * 1000))
                 findViewById<TextView>(R.id.TV_wind).text = windSpeed
                 findViewById<TextView>(R.id.TV_pressure).text = pressure
                 findViewById<TextView>(R.id.TV_humidity).text = humidity
