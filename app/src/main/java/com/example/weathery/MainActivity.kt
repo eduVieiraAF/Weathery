@@ -15,7 +15,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val CITY = "saopaulo,sp"
+    val CITY = "guarulhos"
     val API = "70d0c9a3906de21957a0df3ecd97e29c"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,9 +73,9 @@ class MainActivity : AppCompatActivity() {
                 val windSpeed = wind?.getString("speed")
                 val weatherDescription = weather?.getString("description")
                 val address = jsonObj.getString("name") + ", " +
-                        sys.getString("county")
+                        sys.getString("country")
 
-                findViewById<TextView>(R.id.addressLayout).text = address
+                findViewById<TextView>(R.id.TV_address).text = address
                 findViewById<TextView>(R.id.updated_at).text = updatedAtText
                 if (weatherDescription != null) {
                     findViewById<TextView>(R.id.TV_status).text =
