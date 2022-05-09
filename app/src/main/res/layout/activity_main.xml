@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg1"
     android:orientation="vertical"
-    android:padding="21dp"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -21,24 +21,25 @@
             android:id="@+id/addressLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/TV_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="34sp"
+                android:layout_marginTop="32sp"
                 android:text="São Paulo, SP"
+                android:textSize="34sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp"
+                android:layout_marginTop="12dp"
                 android:text="2 February 2022, 16:08 PM"
+                android:textSize="14sp"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
@@ -48,41 +49,44 @@
             android:id="@+id/overviewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/TV_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
                 android:layout_gravity="center"
                 android:text="Clear Sky"
+                android:textSize="22sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/TV_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="90sp"
-                android:fontFamily="sans-serif-thin"
                 android:layout_gravity="center"
+                android:fontFamily="sans-serif-thin"
                 android:text="32°C"
+                android:textSize="90sp"
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <TextView android:id="@+id/TV_minTemp"
+                <TextView
+                    android:id="@+id/TV_minTemp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Min Temp: 24ºC"
                     tools:ignore="HardcodedText" />
 
-                <Space android:layout_width="50dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/TV_maxTemp"
@@ -99,8 +103,8 @@
             android:id="@+id/detailsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,11 +115,11 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
+                    android:background="#3CF1EBF1"
                     android:gravity="center"
-                    android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -124,33 +128,39 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Sunrise"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
-                    <TextView android:id="@+id/TV_sunrise"
+                    <TextView
+                        android:id="@+id/TV_sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
                         android:text="05:30 AM"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:gravity="center" android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -159,35 +169,39 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Sunset"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
-                        <TextView
+                    <TextView
                         android:id="@+id/TV_sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
                         android:text="06:40 PM"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
+                    android:background="#3CF1EBF1"
                     android:gravity="center"
-                    android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -196,26 +210,31 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Wind"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
-                    <TextView android:id="@+id/TV_wind"
+                    <TextView
+                        android:id="@+id/TV_wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
                         android:text="07:10 AM"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
             </LinearLayout>
 
-            <Space android:layout_width="wrap_content" android:layout_height="10dp"/>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -226,11 +245,11 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
+                    android:background="#3CF1EBF1"
                     android:gravity="center"
-                    android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -239,35 +258,39 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Pressure"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/TV_pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
                         android:text="30 inches"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
+                    android:background="#3CF1EBF1"
                     android:gravity="center"
-                    android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -276,33 +299,39 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Humidity"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
-                    <TextView android:id="@+id/TV_humidity"
+                    <TextView
+                        android:id="@+id/TV_humidity"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="14sp"
+                        android:layout_height="wrap_content"
                         android:text="12%"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
+                    android:background="#3CF1EBF1"
                     android:gravity="center"
-                    android:padding="8dp"
-                    android:background="#3CF1EBF1">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="25dp"
@@ -311,22 +340,24 @@
                         app:tint="#FFFFFF"
                         tools:ignore="ContentDescription" />
 
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
                         android:text="Created By"
+                        android:textSize="12sp"
                         tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/TV_about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Eduardo"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:text="Eduardo"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>

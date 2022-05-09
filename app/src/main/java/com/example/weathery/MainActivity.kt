@@ -15,8 +15,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val CITY = "guarulhos"
-    val API = "70d0c9a3906de21957a0df3ecd97e29c"
+    val city = "guarulhos"
+    val api = "70d0c9a3906de21957a0df3ecd97e29c"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg p0: String?): String? {
 
             val response: String? = try {
-                URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API")
+                URL("https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$api")
                     .readText(Charsets.UTF_8)
             } catch (e: Exception) {
                 null
@@ -60,17 +60,17 @@ class MainActivity : AppCompatActivity() {
                 val wind = jsonObj?.getJSONObject("wind")
                 val weather = jsonObj?.getJSONArray("weather")?.getJSONObject(0)
                 val updatedAt: Long = jsonObj!!.getLong("dt")
-                val updatedAtText = "Updated at: " + SimpleDateFormat(
-                    "dd/MM/yyyy hh:mm a", Locale.ENGLISH
+                val updatedAtText = SimpleDateFormat(
+                    "MMM dd, yyyy - hh:mm a", Locale.ENGLISH
                 ).format(updatedAt * 1000)
-                val temp = main?.getString("temp") + "ºC"
+                var temp = main?.getString("temp") + "ºC"
                 val tempMin = " Min Temp: " + main?.getString("temp_min") + "ºC"
                 val tempMax = "Max Temp: " + main?.getString("temp_max") + "ºC"
-                val pressure = main?.getString("pressure")
-                val humidity = main?.getString("humidity")
+                val pressure = main?.getString("pressure") + " hPa"
+                val humidity = main?.getString("humidity") + "%"
                 val sunrise: Long = sys!!.getLong("sunrise")
                 val sunset: Long = sys.getLong("sunset")
-                val windSpeed = wind?.getString("speed")
+                val windSpeed = wind?.getString("speed") + " km/h"
                 val weatherDescription = weather?.getString("description")
                 val address = jsonObj.getString("name") + ", " +
                         sys.getString("country")
